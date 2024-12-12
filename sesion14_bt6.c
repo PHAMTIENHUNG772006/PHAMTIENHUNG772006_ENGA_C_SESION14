@@ -1,12 +1,14 @@
 #include<stdio.h>
-
-int main(){
-	char fullName[]="pham tien hung";
-	int	size= strlen(fullName);
-	printf("%d",size);
-	for(int i=0;i<size-1;i++){
-	printf("ki tu thu %d la :%c\n",i+1,fullName[i]);
-	
+void str(){
+	char a[20]="ds78d7c98sd#22FSDF";
+	int count = 0;
+	for(int i=0;i<strlen(a);i++){
+		if(a[i]>='a' && a[i]<='z') count++;
+		if(a[i]>='A' && a[i]<='Z') count++;
+	}
+	printf(" so ki tu co trong chuoi la %d", count);
 }
+int main(){
+	str();
 	return 0;
 }

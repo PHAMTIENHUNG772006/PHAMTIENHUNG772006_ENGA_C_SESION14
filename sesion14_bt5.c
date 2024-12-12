@@ -1,13 +1,19 @@
 #include<stdio.h>
-int main(){
-	int count;
-	char text[]="hoc lap trinh Java";
-	int size = strlen(text);
-	for(int i=0;i<size;i++){
-		if( i == "     "){
-			count++;
+void str(char str[100], int letter){
+	for(int i=0;i<strlen(str);i++){
+		if(str[i] == ' '){
+			letter++;
 		}
 	}
-	printf(" trong chuoi text gom co %d chuoi con", count);
-return 0;
+	printf("\n Chuoi ban nhap gom %d ki tu",letter+1);
+}
+
+
+int main(){
+	char str[100];
+	int letter = 0;
+	printf("moi ban nhap chuoi : ");
+	fgets(str,100,stdin);
+	str(str,letter);
+	return 0;
 }
